@@ -90,13 +90,19 @@ stream.on('close',(err,data)=>{
 
 const path = require('path')
 
+
+
 ### path.join() 路径拼接
 
 拼接过程中  ../  会抵消一层路径
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-13_11-07-03.png)
+![](.\images\img\Snipaste_2024-04-13_11-07-03.png)
+
+###   path.resolve([from ...], to)
+
+ 解析路径或一系列路径，根据当前工作目录计算出绝对路径。
 
 ### path.basename() 获取文件名
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-13_11-15-50.png)
+![](.\images\img\Snipaste_2024-04-13_11-15-50.png)
 
 ### path.extname() 获取扩展名
 
@@ -653,7 +659,7 @@ handle.listen()
 handle.onconnection = function (err, handle) {
 
     try {
-        const worker = workers.pop()
+        const worker = workers.pop()  //弹出 处理
 
         worker.send({}, handle)
         workers.unshift(worker)  //添加到队头

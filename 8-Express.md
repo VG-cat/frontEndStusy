@@ -112,9 +112,9 @@ nodemon study16-Express\app.js
 
 指业务流程的中间处理环节
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_10-59-33.png)
+![](.\images\img\Snipaste_2024-04-16_10-59-33.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_09-41-00.png)
+![](.\images\img\Snipaste_2024-04-16_09-41-00.png)
 
 <b>next函数</b> 的作用就是实现多个中间件的串联调用，表示把流转关系转交给下一个中间件或路由,没传入中间件时匹配路由
 
