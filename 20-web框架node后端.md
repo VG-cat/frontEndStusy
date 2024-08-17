@@ -520,3 +520,289 @@ module.exports = PostsService;
 
 
 
+## Restful
+
+![](images/img/Snipaste_2024-08-16_13-21-40.png)
+
+接口定义粒度细，需要多个请求才能完成一个业务
+
+## GraphQL
+
+按需返回请求字段内容
+
+一个请求获取多个资源
+
+### 数据类型
+
+![](images/img/Snipaste_2024-08-16_18-49-41.png)
+
+枚举类型
+
+enum Char {
+	a
+	b
+}
+
+列表类型
+
+[]
+
+[]!，string！ 表示非空   [string！]!表示元素和列表均非空
+
+### 输入类型
+
+主要涉及数据变更操作，mutation场景(需要客户端传入数据)
+
+```
+# 客户端默认查询类型query，服务端必须有且唯一
+extend type Query {
+    articleList(first: ID): [Article]
+    a(first: String = "ff"): String      
+}
+
+
+#客户端默认的变更类型，服务端必须要且唯一
+extend type Mutation {
+    addArticle(title: String, content: String, author: AddAuthor): Article
+}
+
+input AddAuthor {
+    name: String
+    age: Int
+}
+```
+
+```
+操作：
+mutation {
+  addArticle(title: "title", content: "content", author: {name: "张三", age: 15}){
+    title
+    content
+    id
+  }
+}
+```
+
+
+
+### 服务端egg-apollo-server
+
+npm i egg-apollo-server --save
+
+```
+//plugin.js
+graphql: {
+    enable: true,
+    package: 'egg-apollo-server',
+  },
+```
+
+```
+  //config.default.js
+  
+  config.graphql = {
+    router: '/graphql',
+    app: true, // 是否加载到 app 上,默认为 true
+    agent: false, // 是否加载到 agent 上,默认为 false
+    graphiql: true, // 是否加载开发者工具 playground,默认为 true
+    uploads: true, // 是否开启文件上传功能，默认开启
+
+    // 是否添加默认的type Query,Mutation,默认为true
+    // 如果为true须使用extend type Query|extend type Mutation,因为graphql规定同一个type只能定义一个
+    // 带来的好处时egg/graphql下不用再新建query,mutation目录
+    defaultEmptySchema: true,
+
+    // subscriptions的值为<Object>|<String>|false 见https://www.apollographql.com/docs/apollo-server/api/apollo-server/
+    // 如果为String 表示订阅的路径
+    // 如果为false 关闭订阅
+    // 如果为object 可以添加path,keepAlive,onConnect,onDisconnect
+    subscriptions: false,
+    // subscriptions: {
+
+    //   onConnect: (connectionParams, webSocket) => {
+    //     console.log('connect');
+    //     if (connectionParams.authToken) {
+    //       // return validateToken(connectionParams.authToken)
+    //       //   .then(findUser(connectionParams.authToken))
+    //       //   .then(user => {
+    //       //     return {
+    //       //       currentUser: user,
+    //       //     }
+    //       //   })
+    //     }
+
+    //     // throw new Error('Missing auth token!')
+    //   },
+    // },
+    // 可选字段,接受项目中发生的错误,然后自定义错误返回给前端
+    formatError: (error, app) => {
+      // console.log(error);
+      app.logger.error(error);
+      return error;
+    },
+    debug: false, // 发生错误时,是否包含错误堆栈信息,生产环境要设置为false
+  };
+  
+  
+  //同时需要csrf设置为false，graphql需要跳过验证
+  config.security = {
+    csrf: {
+      enable: false,       // 测试graphql时，需要关闭
+      queryName: '_csrf', // 通过 query 传递 CSRF token 的默认字段为 _csrf
+      bodyName: '_csrf', // 通过 body 传递 CSRF token 的默认字段为 _csrf
+    },
+  
+```
+
+同时在app文件夹下，建立graphql文件夹
+
+对应业务下必须有两个文件，resolver.js和schema.graphql文件
+
+schema.graphql负责定义数据结构
+
+```
+//app/graphql/artical/schema.graphql
+#本文件，定义结构
+
+#插件设置了默认的Query,Mutation 所以不用定义Query,直接使用extend继承
+# 客户端默认查询类型query，服务端必须有且唯一
+extend type Query {
+	#使用{articleList（）{id,name}}  指定返回的属性
+    articleList(first: ID): [Article]
+    #返回为单一属性时,{a()};使用默认参数时，{a}
+    a(first: String = "ff"): String      
+}
+
+
+#客户端默认的变更类型，服务端必须要且唯一
+extend type Mutation {
+    addArticle(title: String, content: String, author: AddAuthor): Article
+}
+
+type Article {
+    id: ID
+    title: String
+    content: String
+    author: Author
+    find(name:String) : Author
+}
+type Author {
+    name: String
+    age: Int
+}
+
+input AddArticle {
+    title: String
+    content: String
+}
+
+input AddAuthor {
+    name: String
+    age: Int
+}
+
+```
+
+
+
+resolver.js负责为对应结构赋予真是返回值
+
+```
+//app/graphql/artical/resolver.js
+'use strict';
+// 本文件为结构赋予具体的值
+
+
+const list = [
+  {
+    id: 1,
+    content: 'aaa',
+    title: '',
+    author: {
+      name: 'aaa',
+      age: 18,
+    },
+  },
+  {
+    id: 2,
+    content: 'bbb',
+    title: '',
+    author: {
+      name: 'aaa',
+      age: 18,
+    },
+  },
+];
+
+// 数据类型对应的数据
+module.exports = {
+
+  // 查询
+  Query: {
+  	Article: {
+  		name:(parent) =>{
+  			parent.name
+  		}
+  	}
+    articleList: (root, params) => {
+      console.log(params);
+        list;
+    },
+    a: (root, params) => {
+      console.log(params);
+      return params.first + '3';
+    },
+
+  },
+
+  // 新增
+  Mutation: {
+  	//root表示上级对象
+  	//ctx用于对接数据源（数据库，文件，第三方接口）
+  	
+    addArticle(root, params, ctx，info) {
+      console.log(params);
+      params.id = list.length++;
+      list.push(params);
+      return params;
+    },
+  },
+};
+
+
+```
+
+### 客户端规则
+
+```
+query anothername {       //可以起别名 anothername。同时多个操作 需要起别名
+  articleList(first: 0){
+    id
+    author{
+	  name
+      age
+    }
+  }
+}
+
+
+mutation {
+  addArticle(title: "title", content: "content", author: {name: "张三", age: 15}){
+    title
+    content
+    id
+  }
+}
+```
+
+![](images/img/Snipaste_2024-08-16_20-02-46.png)
+
+![](images/img/Snipaste_2024-08-16_20-06-01.png)
+
+![Snipaste_2024-08-16_20-11-46](images/img/Snipaste_2024-08-16_20-11-46.png)
+
+`指令变量末尾必须添加  ！`
+
+### 客户端调用接口
+
+client进行配置，直接利用官网中间件，调用query,mutation
