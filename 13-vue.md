@@ -45,19 +45,19 @@ export default {
 ### v-bind
 标签属性设置变量值
 ```
-<a  v-bind:href='url'></a>   完整写法，冒号变量名
+<a  v-bind:href='url'></a>   完整写法，冒号属性，传入变量名
 <img :src='imgurl'>      简写形式
 
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data(){
-    return{
-      url:'hagallhgal',
-    }    
-  }
-}
+    export default {
+      name: 'HelloWorld',
+      data(){
+        return{
+          url:'hagallhgal',
+        }    
+      }
+    }
 </script>
 
 ```
@@ -80,7 +80,7 @@ export default {
 	
 }
 ```
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-28_16-30-58.png)
+![](.\images\img\Snipaste_2024-04-28_16-30-58.png)
 
 简写：
 
@@ -89,15 +89,15 @@ export default {
 
 ### 事件对象
 事件无传值，可以直接拿，否则需要参数内加参数$event
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-28_16-48-53.png)
+![](.\images\img\Snipaste_2024-04-28_16-48-53.png)
 
 ####  事件修饰符
 
 @click.stop='a'
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-28_17-00-18.png)
+![](.\images\img\Snipaste_2024-04-28_17-00-18.png)
 
 #### 键盘事件修饰符
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-28_17-09-41.png)
+![](.\images\img\Snipaste_2024-04-28_17-09-41.png)
 
 #### 原生事件修饰符
 
@@ -169,7 +169,7 @@ v-if 作用一样，相当于直接从dom 树移除
 ### 动态样式
 ```
 
-<p :class="{className:bool}">      //bool为true，生效样式
+<p :class="{className:bool}">      //bool为true，生效样式classname
 
 <p :style="{color:colorParam}">      //colorParam为变量
 ```
@@ -230,7 +230,7 @@ computed:{
 配置项写法：
 
 - 监听简单属性：
-  ![watch](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_14-07-41.png)
+  ![watch](.\images\img\Snipaste_2024-04-29_14-07-41.png)
 
 - 监听复杂属性：
   ![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_14-12-11.png)
@@ -363,7 +363,7 @@ v-modal或者借助修饰符，.sync
 ```
 父：
 <child  :count.sync='mycount'/>
-子
+子 
 this.$emit('update:count',false)
 ```
 
@@ -375,10 +375,10 @@ import Vue from 'vue'
 export default new Vue()
 ```
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_20-27-33.png)
+![](.\images\img\Snipaste_2024-04-29_20-27-33.png)
 
 定义自定义事件---send
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_20-34-50.png)
+![](.\images\img\Snipaste_2024-04-29_20-34-50.png)
 
 ### 注册多个自定义组件
 
@@ -399,7 +399,10 @@ Vue.component(other)
 new Vue()
 ```
 ### 生命周期
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_20-58-16.png)
+
+![](images/img/Snipaste_2024-08-21_16-13-40.png)
+
+![](.\images\img\Snipaste_2024-04-29_20-58-16.png)
 
 #### created生命周期函数
 在组件创建完成后立即执行，可以用于发送ajax请求，用于初始化数据,或注册全局事件

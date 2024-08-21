@@ -665,7 +665,7 @@ ReactDOM.createportal(<div>ssss</div>,document.getElementById('root'))，将这�
 const TestContext = React.createContext({
 	name:1111
 })
-- 第二步：引入公共共享内容   
+- 第二步：获取公共共享内容   
   import   TestContext    from   './xxxx'
   <TestContext.Consumer>  //必须传入函数，参数为已经定义的共享值
     {(ctx)=>{
