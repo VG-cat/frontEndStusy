@@ -368,9 +368,11 @@ this.$emit('update:count',false)
 ```
 
 ### 无关系组件通信
-eventBus，建立的空白对象
+eventBus，建立的空白对象,组件共用的事件中心。
 
 ```
+eventBus.js
+
 import Vue from 'vue'
 export default new Vue()
 ```
