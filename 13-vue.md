@@ -133,7 +133,7 @@ export default{
 ```
 #### 修饰符号
 接收转换成指定数据格式
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-28_17-57-14.png)
+![](.\images\img\Snipaste_2024-04-28_17-57-14.png)
 
 ### v-text、v-html
 显示 指定内容到当前标签的中
@@ -1411,6 +1411,8 @@ setup(){
 }
 
 ### v-model语法糖更新
+
+input自带input事件，其他组件需要自定义
 
 <Son :modelValue='mom' @update:modelValue='mon=$event'>
 
