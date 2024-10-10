@@ -1,4 +1,4 @@
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-12_21-23-39.png)
+![](.\images\img\Snipaste_2024-04-12_21-23-39.png)
 
 ##  简介
 
@@ -6,7 +6,7 @@ node.js 是一个基于V8引擎的js运行环境，对应后端
 
 浏览器也是一个运行环境，对应前端
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-13_09-20-19.png)
+![](.\images\img\Snipaste_2024-04-13_09-20-19.png)
 
 ## fs文件模块
 
@@ -17,7 +17,7 @@ const fs = require('fs')
 
 ### fs.readFile() 读取文件
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-13_09-46-45.png)
+![](.\images\img\Snipaste_2024-04-13_09-46-45.png)
 
 ```
 fs.readFile('./test.txt','utf8',function(err,datastr){
@@ -33,7 +33,7 @@ fs.readFileSync("1.txt")   //返回buffer类型
 
 不会创建新文件，重复写入会覆盖内容
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-13_10-42-08.png)
+![](.\images\img\Snipaste_2024-04-13_10-42-08.png)
 
 ```javascript
 fs.writeFile('./test.txt','型写入内容',function(err){
@@ -188,7 +188,7 @@ https对数据进行对称加密，对对称加密的密钥采用非对称加密
 
 ## 模块化
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-13_17-40-29.png)
+![](.\images\img\Snipaste_2024-04-13_17-40-29.png)
 
 
 ### 加载模块
@@ -202,7 +202,7 @@ require('./selfDefine')    //第三方模块，必须要./或 ../开头
 加载模块优先从缓存中加载
 其他模块和内置模块重名时，只认内置模块
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-15_19-40-42.png)
+![](.\images\img\Snipaste_2024-04-15_19-40-42.png)
 
 ### module对象
 
@@ -229,7 +229,7 @@ exoprt.age = 33
 ### 模块化规范
 
 node.js遵循CommonJS模块化规范
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-15_12-52-22.png)
+![](.\images\img\Snipaste_2024-04-15_12-52-22.png)
 
 ## 包
 
@@ -249,7 +249,7 @@ npm init -y    //快速创建package.json文件
 npm install   //一次性安装package中的所有包
 
 #### devDependencies节点
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-15_14-55-06.png)
+![](.\images\img\Snipaste_2024-04-15_14-55-06.png)
 
 将包记录到devDependencies节点中
 npm i moment -D     //简写方式

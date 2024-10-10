@@ -40,7 +40,7 @@ app.use(/public,express.static('public'))  //添加统一路径前缀
 
 ### 挂载路由
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-15_20-04-58.png)
+![](.\images\img\Snipaste_2024-04-15_20-04-58.png)
 
 路由函数/接口
 app.get('/',function(req,res){
@@ -147,15 +147,15 @@ app.get('./use',mw1,mw2，function(req,res){})
 
 ### 中间件分类
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_13-21-12.png)
+![](.\images\img\Snipaste_2024-04-16_13-21-12.png)
 
 应用中间件：绑定到app实例上面的中间件
 路由中间件：绑定到Router()实例上的中间件
 错误中间件：用来捕获异常错误，function（err,req,res，next）{}，必须注册在所有路由之后
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_13-35-31.png)
+![](.\images\img\Snipaste_2024-04-16_13-35-31.png)
 
 内置中间件：
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_13-54-37.png)
+![](.\images\img\Snipaste_2024-04-16_13-54-37.png)
 
 ### 自定义中间件
 
@@ -201,17 +201,17 @@ $.ajax({
 
 只在服务端进行配置，且要求浏览器支持xmlHttpRequestLevel2
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_19-08-54.png)
+![](.\images\img\Snipaste_2024-04-16_19-08-54.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_16-52-08.png)
+![](.\images\img\Snipaste_2024-04-16_16-52-08.png)
 
 #### 响应头-个性化
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_19-11-41.png)
+![](.\images\img\Snipaste_2024-04-16_19-11-41.png)
 
-![Snipaste_2024-04-16_19-14-23](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_19-14-23.png)
+![Snipaste_2024-04-16_19-14-23](.\images\img\Snipaste_2024-04-16_19-14-23.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-16_19-17-09.png)
+![](.\images\img\Snipaste_2024-04-16_19-17-09.png)
 
 ### JSONP
 
@@ -262,7 +262,7 @@ res.render('index',{title='222'})     //传入参数
 \<h1><%= title%></h1>  //页面接收参数
 
 <% %> //流程控制标签，写if-else，for等，包头包尾，包中间数据，不包html标签
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-17_13-39-52.png)
+![](.\images\img\Snipaste_2024-04-17_13-39-52.png)
 <%= %> // 原文输出
 <%-  %> //解析为Html
 <%# %>  //注释，开发者可以看到，页面看不到，压缩文件大小
@@ -305,7 +305,7 @@ alter user 'root'@'localhost' identified with mysql_native_password by '123456';
 
 用？占位
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-19_14-38-16.png)
+![](.\images\img\Snipaste_2024-04-19_14-38-16.png)
 
 const  user  = {username:22}
 const sqlStr = 'inster into users set ?'

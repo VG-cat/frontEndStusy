@@ -14,15 +14,15 @@ css,less
 开发服务器 等功能
 
 vue create vuecil-demo
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-26_14-43-55.png)
+![](.\images\img\Snipaste_2024-04-26_14-43-55.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-26_14-51-29.png)
+![](.\images\img\Snipaste_2024-04-26_14-51-29.png)
 
 
 ## MVVM设计模式
 数据双向绑定，数据驱动dom，dom赋值数据 
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-28_09-33-50.png)
+![](.\images\img\Snipaste_2024-04-28_09-33-50.png)
 ## vue基础指令
 
 模板字符串语法
@@ -233,7 +233,7 @@ computed:{
   ![watch](.\images\img\Snipaste_2024-04-29_14-07-41.png)
 
 - 监听复杂属性：
-  ![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_14-12-11.png)
+  ![](.\images\img\Snipaste_2024-04-29_14-12-11.png)
   
   内部简写法：
   
@@ -415,25 +415,25 @@ export default{
 	}
 }
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_21-14-16.png)
+![](.\images\img\Snipaste_2024-04-29_21-14-16.png)
 
 #### mounted()
 beforeMount()：真实dom挂载之前进行，用于预处理data，不会触发update钩子函数
 mounted()：真实dom挂载之后进行，用于获取dom
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_21-25-08.png)
+![](.\images\img\Snipaste_2024-04-29_21-25-08.png)
 
 #### update()
 beforeupdate（）：数据更新，dom没有更新时才会执行
 update（）:dom也更新后才会执行
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_21-27-23.png)
+![](.\images\img\Snipaste_2024-04-29_21-27-23.png)
 
 #### destroy()
 
 用于手动移除全局事件，定时器，计时器，eventBus移除事件$off方法
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-29_21-37-22.png)
+![](.\images\img\Snipaste_2024-04-29_21-37-22.png)
 
 #### 激活态与非激活态
 配合组件缓存时，查看当前组件切换状态
@@ -510,7 +510,7 @@ export default {
 
 #### 作用域插槽
 在外部使用插槽，想要访问子组件内部的变量时，可以使用作用域插槽
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-05-06_15-15-35.png)
+![](.\images\img\Snipaste_2024-05-06_15-15-35.png)
 
 #### 具名插槽
 多个插槽时，可以定义name，进行区分
@@ -638,7 +638,7 @@ app文件
 
 可以设置激活样式 .router-link-active{}
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-05-06_21-11-36.png)
+![](.\images\img\Snipaste_2024-05-06_21-11-36.png)
 
 ###声明式导航 -路由传值
 ```
@@ -742,7 +742,7 @@ btn(rot){
 
 ### 激活状态
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-05-06_22-40-23.png)
+![](.\images\img\Snipaste_2024-05-06_22-40-23.png)
 
 ### 路由守卫
 为路由添加权限判断
@@ -809,9 +809,9 @@ exportFunc(){
 
 ## 简介
 集中式管理组件依赖的共享数据的工具，可以解决非关系型组件的数据共享问题
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-05-09_10-27-44.png)
+![](.\images\img\Snipaste_2024-05-09_10-27-44.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-05-09_10-33-11.png)
+![](.\images\img\Snipaste_2024-05-09_10-33-11.png)
 ## 使用
 在main.js中
 ```
@@ -948,7 +948,7 @@ computed:{
 }
 ```
 ## modules
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-05-09_14-20-33.png)
+![](.\images\img\Snipaste_2024-05-09_14-20-33.png)
 ```
 
 const store =new Vuex.store({
@@ -1150,7 +1150,7 @@ printObj:{
 
 RBAC基于角色的权限控制
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-06-03_12-57-52.png)
+![](.\images\img\Snipaste_2024-06-03_12-57-52.png)
 
 
 
@@ -1226,7 +1226,7 @@ configureWebpack:{
 
 html-webpack-plugin插件
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-06-05_18-58-35.png)
+![](.\images\img\Snipaste_2024-06-05_18-58-35.png)
 
 ## history页面访问问题
 
@@ -1426,7 +1426,7 @@ input自带input事件，其他组件需要自定义
 
 # vue相关原理
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-07-24_10-27-54.png)
+![](.\images\img\Snipaste_2024-07-24_10-27-54.png)
 
 ## 如何实现数据响应式
 

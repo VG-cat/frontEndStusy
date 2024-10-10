@@ -173,7 +173,7 @@ $('div')[0]
 
 外边距：margin
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-07_21-12-01.png)
+![](.\images\img\Snipaste_2024-04-07_21-12-01.png)
 
 ## 事件参数
 
@@ -248,39 +248,39 @@ $('p').delay(1000).动画方法（)
 
 ### 轮播图插件  slick
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_10-04-00.png)
+![](.\images\img\Snipaste_2024-04-08_10-04-00.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_10-04-37.png)
+![](.\images\img\Snipaste_2024-04-08_10-04-37.png)
 
 ### 懒加载插件 lazyload
 
 图片在看到以后加载，不是随页面立即加载
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_10-16-28.png)
+![](.\images\img\Snipaste_2024-04-08_10-16-28.png)
 
 ### 全屏滚动插件  fullpage
 营销广告页面
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_10-38-51.png)
+![](.\images\img\Snipaste_2024-04-08_10-38-51.png)
 
-![Snipaste_2024-04-08_10-39-11](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_10-39-11.png)
+![Snipaste_2024-04-08_10-39-11](.\images\img\Snipaste_2024-04-08_10-39-11.png)
 
 ### 日期选择器插件  datepicker
 
 
 不同浏览器统一样式
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_11-08-38.png)
+![](.\images\img\Snipaste_2024-04-08_11-08-38.png)
 
-![Snipaste_2024-04-08_11-09-00](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_11-09-00.png)
+![Snipaste_2024-04-08_11-09-00](.\images\img\Snipaste_2024-04-08_11-09-00.png)
 
 ### 表单验证插件 validate
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_13-40-13.png)
+![](.\images\img\Snipaste_2024-04-08_13-40-13.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_13-41-18.png)
+![](.\images\img\Snipaste_2024-04-08_13-41-18.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-08_13-48-29.png)
+![](.\images\img\Snipaste_2024-04-08_13-48-29.png)
 
 ## 表单序列化
 

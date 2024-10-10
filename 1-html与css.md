@@ -58,32 +58,32 @@ font-size：0，来增加排名优化，但不影响页面
 ### 伪类选择器
 选择某一特定状态的元素
 
-![Snipaste_2024-03-28_16-51-07](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-28_16-51-07.png)
+![Snipaste_2024-03-28_16-51-07](.\images\img\Snipaste_2024-03-28_16-51-07.png)
 
-![Snipaste_2024-03-28_20-57-27](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-28_20-57-27.png)
+![Snipaste_2024-03-28_20-57-27](.\images\img\Snipaste_2024-03-28_20-57-27.png)
 
-![Snipaste_2024-03-28_21-18-37](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-28_21-18-37.png)![Snipaste_2024-03-28_21-31-18](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-28_21-31-18.png)
+![Snipaste_2024-03-28_21-18-37](.\images\img\Snipaste_2024-03-28_21-18-37.png)![Snipaste_2024-03-28_21-31-18](.\images\img\Snipaste_2024-03-28_21-31-18.png)
 
 选择器权重
 div{
 	color:red   !important 
 }
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-29_14-49-11.png)
+![](.\images\img\Snipaste_2024-03-29_14-49-11.png)
 
 ### 伪元素
 使用css创建特定的元素，为inline级元素
 在父级标签内创建标签
 
 一定要加content:''
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-29_14-20-43.png)
+![](.\images\img\Snipaste_2024-03-29_14-20-43.png)
 
 
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-29_16-02-34.png)
+![](.\images\img\Snipaste_2024-03-29_16-02-34.png)
 
 
 ###隐藏元素
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-29_19-16-49.png)
+![](.\images\img\Snipaste_2024-03-29_19-16-49.png)
 
 
 ### 向上传递（塌陷）
@@ -103,7 +103,7 @@ text-shadow：offset-x,offset-y,blur,color,   //相对与xy轴的偏移，模糊
 
 
 ### 盒子级别
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-03-30_21-48-08.png)
+![](.\images\img\Snipaste_2024-03-30_21-48-08.png)
 
 ### 浮动
 
@@ -171,7 +171,7 @@ padding，margin可以将span等撑起来，但是不占空间
 
 浏览器遇到行内和行内块标签按文字处理，默认文字是按基线对齐
 vertical-align : middle，改变文字垂直方向对齐方式
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-01_15-13-35.png)
+![](.\images\img\Snipaste_2024-04-01_15-13-35.png)
 标准流《 浮动 《 定位
 
 ### 绘制三角形
@@ -184,7 +184,7 @@ vertical-align : middle，改变文字垂直方向对齐方式
 ### 精灵图
 场景：将多张小图片合成一张大图片，这张大图片称为精灵图
 优点：减少服务器发送次数，提高页面速度
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-01_15-35-58.png)
+![](.\images\img\Snipaste_2024-04-01_15-35-58.png)
 
 将图片设置为背景图片，移动背景图片
 {
@@ -426,7 +426,7 @@ max-width
 } 
 
 避免样式层叠性，min要从小到大写，max要从大到小写
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-07_09-42-06.png)
+![](.\images\img\Snipaste_2024-04-07_09-42-06.png)
 
 #### link引入
 
@@ -440,11 +440,11 @@ max-width
 类名：container定义容器
 
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-07_10-05-57.png)
+![](.\images\img\Snipaste_2024-04-07_10-05-57.png)
 
-![Snipaste_2024-04-07_10-06-55](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-07_10-06-55.png)
+![Snipaste_2024-04-07_10-06-55](.\images\img\Snipaste_2024-04-07_10-06-55.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-07_10-25-25.png)
+![](.\images\img\Snipaste_2024-04-07_10-25-25.png)
 
 ## less
 less是css的预处理器，文件后缀.less
@@ -469,7 +469,7 @@ less是css的预处理器，文件后缀.less
 ```
 ### 变量
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-02_20-21-02.png)
+![](.\images\img\Snipaste_2024-04-02_20-21-02.png)
 
 
 ### 导入文件

@@ -313,7 +313,7 @@ module.export = {
 
   其他优化项：
 
-  ![](E:\桌面文件\笔记\前端笔记\images\img\QQ截图20240309205735.png)
+  ![](.\images\img\QQ截图20240309205735.png)
 
   
 

@@ -1,6 +1,6 @@
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-12_15-58-33.png)
+![](.\images\img\Snipaste_2024-04-12_15-58-33.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-12_15-57-48.png)
+![](.\images\img\Snipaste_2024-04-12_15-57-48.png)
 
 ## 命令
 
@@ -8,9 +8,9 @@
 
 .git文件，本地git仓库的配置文件
 .gitignore文件，配置不纳入git管理的文件
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-12_17-19-13.png)
+![](.\images\img\Snipaste_2024-04-12_17-19-13.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-12_17-23-36.png)
+![](.\images\img\Snipaste_2024-04-12_17-23-36.png)
 
 <b> 工作区 -----》本地git仓库 </b>
 
@@ -40,9 +40,9 @@ git  reflog  //回退旧版后，使用该命令查看所有日志
 
 ## 远程仓库
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-12_19-18-48.png)
+![](.\images\img\Snipaste_2024-04-12_19-18-48.png)
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-12_19-36-24.png)
+![](.\images\img\Snipaste_2024-04-12_19-36-24.png)
 
 ssh -t git@github.com    //验证本机github是否配置成功
 
@@ -65,7 +65,7 @@ git pull   //从远程仓库拉取当前分支最新代码，保持代码一致
 
 master作用是保存和记录整个项目已完成的代码
 
-![](E:\桌面文件\笔记\前端笔记\images\img\Snipaste_2024-04-12_20-55-05.png)
+![](.\images\img\Snipaste_2024-04-12_20-55-05.png)
 
 git branch    //查看本地所有分支
 
