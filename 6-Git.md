@@ -115,3 +115,23 @@ git commit -m '备注'
 git pull
 
 git push  origin master    //第一次推的时候才用加 -u，之后不用
+
+## 上传大文件
+
+git lfs install
+
+git lfs track "*.pdf"
+
+git add .gitattributes
+
+`先分开上传，将gitattributes文件长传后，在上传大文件`
+
+git cimmit -m 'a'
+
+git pull 
+
+git push
+
+git add . 
+
+....
