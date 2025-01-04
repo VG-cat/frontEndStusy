@@ -10,26 +10,43 @@
 
 标签+内容 =元素 
 
-## html
+## html5
+去w3c.com
 
 <!DOCTYPE   HTML>   表明h5版本
 
 
-- ### meta
+- meta
 
   表示那些不能由其他 HTML 元相关（meta-related）元素表示的元数据信息。
+  常用于搜索引擎优化
+  
+  5秒后自动刷新页面：
+  <meta http-equiv="refresh" content="5:http://www.baidu.com">
+  禁用缓存，
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cahe-Control" content="no-cache">
+  <meta http-equiv="expires" content="0">
 
 src ==source
 
-- ### a
+-  pre
+预文本标签，按照书写的样式显示（换行。。。）
+```
+<pre>
+年后
+  你哈
+</pre>
+```
+
+- a
 
   target："_self"
       _black
       _top          //结合ifarme使用，最上层
       _parent   //结合ifarme使用，父级
 
-页面内锚点效果
-href属性指向id名    
+页面内锚点效果：href属性指向id名或name名    
 
 ```
 <h2  id='2'></h2>
@@ -39,23 +56,119 @@ href属性指向id名
 
 - iframe
   利用该元素可以实现在一个HTML页面中插入另一个HTML页面
+- frameset
+框架标签
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文档标题</title>
+</head>
 
+ <frameset rows='50px,*,100px'>
+   <frame src='https://cn.bing.com/search?q=%E5%9C%A8%E7%BA%BFhtml'/>
+   <frameset cols='20%,*'>
+     <frame/>
+     <frame src='https://cn.bing.com/search?q=Exits%20the%20shell%20with%20a%20status%20of%20N.%20%20If%20N%20is%20omitted%2C%20the%20exit%20status%20%20%20%20%20is%20that%20of%20the%20last%20command%20executed.'/>
+   </frameset>
+   <frame/>
+ </frameset>
 
-###SEO
+</html>
+
+```
+- 小标签
+```
+u 下划线标签
+i 倾斜
+b 加粗
+del 删除线标签
+sup  上标标签
+sub  下标标签
+small  字体变小
+big
+font  字体标签
+marquee  跑马灯
+```
+- 表单增强标签
+```
+<input type='email' autofocus/>
+<input type='number' max='100'/>  数字
+<input type='range' />   滑动器
+<input type='search' />
+<input type='data' />
+<input type='url' />
+....
+```
+-  结构增强
+对div的功能结构进行了细分
+![](./images/img/Snipaste_2025-01-03_19-58-09.png)
+
+- 音视频标签
+```
+<audio>
+	<source src='1.mp3'></source>
+	<source src='1.ogg'></source>
+	该浏览器不支持播放
+</audio>
+
+<video>
+ ....
+</video>
+
+<embed src='1.mp3'>多媒体标签</emded>
+```
+- details
+折叠标签
+- mark
+强调标签，增加背景颜色
+- progress
+进度条
+
+##SEO
 
 搜索引擎优化
 title  
 keywords
 description
 
+<meta name="author" content="作者">
 <meta name="keywords" content="关键词">
 <meta name="description" content="描述">
 
 font-size：0，来增加排名优化，但不影响页面
 
-## css
+## css3
+
+reset.css清除样式
+
+![](./images/img/Snipaste_2025-01-03_21-14-20.png)
+
+###  导入方式
+
+```
+<link rel='stylesheet' type='text/css' href='css/a.css'/>
+<style>
+	@import url('1.css')
+</style>
+<style>
+	a {
+		font-size:20px
+	}
+</style>
+<p style='color:red'></p>
+```
+
+### 选择器
+
+div span 后代选择器
+div>span 直系后代
+div+span 邻接兄弟
+div~span 所有兄弟
 
 ### 伪类选择器
+
 选择某一特定状态的元素
 
 ![Snipaste_2024-03-28_16-51-07](.\images\img\Snipaste_2024-03-28_16-51-07.png)

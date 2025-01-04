@@ -4,6 +4,10 @@
 
 编程语言，人机交互，运行在客户端
 
+为静态页面添加动态效果
+
+校验表单
+
 ## 输出
 
 document.write()
@@ -35,7 +39,7 @@ object
 1-'1'
 1\*'1'
 1/'1'
-+'1'   会将字符串型转换未数字型
++'1'   会将字符串型转换为数字型
 1+'1'  会将数字型转化为字符串型
     
 
@@ -52,12 +56,13 @@ parseInt()，只保留整数，不进行四舍五入       parseFloat()，保留
 3. 其他类型的值（如数字、布尔值等）会被转换成它们的字符串表示形式。
 
 ## 比较运算符
-
- 	==      只比较值
+```
+ 	==      只比较值，类型不一致会都转化为number
  	===		比较值和类型，全等
  	！==	   值和类型有一个不一样的就会返回true
  	
  	NaN 不等于任何值，包括他本身
+```
 
 ## 无限循环
 
@@ -66,12 +71,16 @@ for（；；）{}
 
 ## 数组操作 
 
+arr = []，new Array()
+
 arr.push('333')      //加到结尾
 arr.unshift('333')   //加到开头
 
 arr.pop()     //删除结尾最后一个
 arr.shift()   //删除开头一个
 arr.splice(下标，个数)    //删除指定数量
+
+arr.splice(下标，0,'')    //下标位置添加元素
 
 ## 函数
 
@@ -90,7 +99,7 @@ function(){}
 立即执行
 （function(x,y){}）（1，2）
 
-### 逻辑中断
+## 逻辑中断
 
 aaa   ||  ''              //返回第一个真
 qqq  &&  ''         //两个都是真，则返回最后一个真；两个有一个假，则返回第一个假
@@ -200,17 +209,17 @@ event.preventDefault()
 
 ```
  	<ul>
-        <li>Lorem.</li>
-        <li>Sed.</li>
-        <li>Animi!</li>
-        <li>Est.</li>
-        <li>Corporis.</li>
-    </ul>
-    
-     document.querySelector('ul').addEventListener('click',function(e){
-        e.target.style.color = 'yellow'    //e.target点击的对象
-        console.dir(e.target) //显示所有属性
-    })
+ 	    <li>Lorem.</li>
+ 	    <li>Sed.</li>
+ 	    <li>Animi!</li>
+ 	    <li>Est.</li>
+ 	    <li>Corporis.</li>
+ 	</ul>
+ 	
+ 	 document.querySelector('ul').addEventListener('click',function(e){
+ 	    e.target.style.color = 'yellow'    //e.target点击的对象
+ 	    console.dir(e.target) //显示所有属性
+ 	})
 ```
 
 
@@ -278,6 +287,37 @@ const Date = new Date('2022-10-1 08:11:11')
 .getTime()   或
 +new Date() 或
 Date.now()
+
+
+
+## Math
+
+Math.random()   # 0-1的随机数，不包括1
+
+Math,floor(0.2) #向下取整0
+
+Math.ceil(0.2) #向上取整0
+
+Math.random()*9000 +1000  #随机四位数
+
+
+
+## String
+
+b = '0123456'
+c = b.charAt(2)
+c = b.indexOf('1')
+c = b.substr(2,3),从下标2开始截取长度3
+
+c = b.substring(2,3),从下标2开始截取到下标3
+
+c = b.split('-'),分割
+
+console.log(c)
+
+## Global
+
+所有东西均被挂载到Global对象上
 
 ## 节点操作
 
@@ -441,6 +481,10 @@ $结尾
 /q/i   //不区分大小写
 /q/g  //全局匹配的字符
 new = str.replace(/reg/g,'aa')    //字符串中满足规则的 替换为aa
+
+## 控制表单提交
+
+<input type='submit' onsubmit='return func()'/>  funx返回为false则不会提交
 
 # js进阶（ES6)
 
@@ -719,10 +763,10 @@ this指向实例对象
 		Pig.prototype.py = 20
 		console.log(pipi.py)   //20
 		
-        pipi.py = 30      //覆盖原属性，并在实例对象中添加属性
-        console.log(pipi.py)   //30
-        console.log(Pig.prototype.py)  //20
-        console.log(Pig.py)   //undefine
+	    pipi.py = 30      //覆盖原属性，并在实例对象中添加属性
+	    console.log(pipi.py)   //30
+	    console.log(Pig.prototype.py)  //20
+	    console.log(Pig.py)   //undefine
 ```
 
 ### constructor
@@ -809,15 +853,15 @@ div.addEventListener('mousemove',_.debounce(move,500))
 核心是settimeout
 ```
  		let timerId = null
-        function move2(){
-            if(timerId){
-                clearTimeout(timerId)
-            }
-            timerId = setTimeout(()=>{
-                div.innerHTML = i++
-            },500)
-        }
-        div.addEventListener('mousemove',move2)
+ 	    function move2(){
+ 	        if(timerId){
+ 	            clearTimeout(timerId)
+ 	        }
+ 	        timerId = setTimeout(()=>{
+ 	            div.innerHTML = i++
+ 	        },500)
+ 	    }
+ 	    div.addEventListener('mousemove',move2)
 ```
 
 ## 节流throttle
@@ -832,16 +876,16 @@ div.addEventListener('mousemove',_.debounce(move,500))
 核心是setTimeout
 ```
 		let timerId = null
-        function move2(){
-            if(timerId){
-                return
-            }
-            timerId = setTimeout(()=>{
-                div.innerHTML = i++
-                timerId = null    //clearTimeout不能用，定时器开启期间无法关闭
-            },500)
-        }
-        div.addEventListener('mousemove',move2)
+	    function move2(){
+	        if(timerId){
+	            return
+	        }
+	        timerId = setTimeout(()=>{
+	            div.innerHTML = i++
+	            timerId = null    //clearTimeout不能用，定时器开启期间无法关闭
+	        },500)
+	    }
+	    div.addEventListener('mousemove',move2)
 ```
 ![](.\images\js\Snipaste_2024-03-22_23-02-38.png)
 
