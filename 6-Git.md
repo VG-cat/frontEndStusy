@@ -124,7 +124,7 @@ git lfs track "*.pdf"
 
 git add .gitattributes
 
-`先分开上传，将gitattributes文件长传后，在上传大文件`
+`先分开上传，将gitattributes文件上传后，再上传大文件`
 
 git cimmit -m 'a'
 
