@@ -106,7 +106,7 @@ autoMarge  failure  自动合并错误
 
 git init 
 
-git remote -add origin https:github.com/a.git
+git remote add origin https:github.com/a.git
 
 git add .
 
