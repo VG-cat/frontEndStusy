@@ -1,0 +1,12 @@
+function a(list,root){
+const arr = []
+list.forEach((item)=>{
+if(item.pid === root){
+const child = a(list.item)
+item.child=child
+arr.push(item)
+}
+})
+
+return arr
+}
