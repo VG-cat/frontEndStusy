@@ -135,3 +135,24 @@ git push
 git add . 
 
 ....
+
+
+
+## 如果不要当前的改动，请重置到库的最新版本：
+
+```
+git reset --hard origin/master
+
+
+```
+
+Your branch is ahead of ‘origin/master‘ by N commits    则会回退到 0 commit
+
+
+
+git reset --soft:撤销 git commit
+
+git reset --mixed:撤销 git commit,git add
+
+git reset --hard:撤销 git commit,git add，以及对文件的修改
+
