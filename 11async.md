@@ -91,6 +91,29 @@ getFile()
 
 ```
 
+```
+const util = require('util');
+
+// 定义一个遵循 Node.js 回调风格的函数
+function originalFunction(n,callback) {
+    // callback('erroe', 'hello'); // 调用回调函数,----------2 error
+    callback(null, 'hello'); // 调用回调函数--------2 hello
+    console.log(n);    // 打印 'hello'
+}
+
+// 将回调函数转换为返回 Promise 的函数
+const fun = util.promisify(originalFunction);
+
+// 调用转换后的函数
+fun(2).then((result) => {
+    console.log(result); // 输出: hello
+}).catch((err) => {
+    console.error(err);
+});
+```
+
+
+
 ## async/await
 
 简化promise只能链式.then的问题，await包裹的是一个promise对象

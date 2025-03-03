@@ -174,6 +174,12 @@ app.use(route.post('/upload',upload))
 app.listen(3000) 
 ```
 
+## Jwt鉴权
+
+借助koa-jwt产生鉴权功能
+
+借助jsonwebtoken生成token
+
 # egg
 
 [官网](https://www.eggjs.org/zh-CN/basics/structure)
