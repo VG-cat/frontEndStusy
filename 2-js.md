@@ -777,9 +777,11 @@ Pig.prototype ={
 
 ### 对象原型
 
-__proto__ === [[prototype]]
-用来表名当前的实例对象指向哪一个原型对象
+pipi.\__proto__ === Pig.prototype
+用来表明当前的实例对象指向哪一个原型对象
 __proto__里面也有一个constructor，指向实例对象的构造函数
+
+
 
 ![](.\images\js\Snipaste_2024-03-22_10-32-58.png)
 
